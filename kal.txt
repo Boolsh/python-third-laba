@@ -1,0 +1,2 @@
+Zeus,  light
+Mars,  war
