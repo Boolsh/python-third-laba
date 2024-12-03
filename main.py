@@ -84,8 +84,9 @@ def save_to_file(list):
     filename = input("Введите имя файла для сохранения: ")
     try:
         with open(filename, "w", encoding="utf-8") as file:
+
             for  i in list:
-                file.write(f"{i.get_name()}, {i.get_elem()}\n")
+                file.write(f"{i.name}, {i.elem}\n")
         print("Данные сохранены.")
     except Exception as e:
         print(f"Ошибка при сохранении: {e}")

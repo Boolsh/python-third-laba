@@ -1,7 +1,7 @@
 def God_trigger(func):
     def wrapper(self, *args, **kwargs):
         print(f'Вы осмелились потревожить {self._name}', end = "\n")
-        return func(self, *args, **kwargs)
+        return func(self, *args, *kwargs)
     return wrapper
 
 class God():
@@ -12,12 +12,13 @@ class God():
     def listen_praying(self, text_of_praying):
         print("Молитва выслушана\n")
 
-
-    def get_name(self):
+    @property
+    def name(self): #
         return self._name
 
-
-    def get_elem(self):
+    @property
+    @God_trigger
+    def elem(self): # +  @God_trigger
         return self._element
 
 
